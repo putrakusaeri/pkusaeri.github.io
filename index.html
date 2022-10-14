@@ -2,12 +2,16 @@
 <html lang="id">
 <head>
   <title>Sistem Pakar</title>
-  <link rel="icon" type="fa fa-pencil" href="fa fa-pencil">
-  
+  <link rel="icon" type="image/x-icon" href="media/technical-support.png">
   <style>
     body {
       font-family: sans-serif;
+      background-image: url('media/motor.png');
+      background-repeat: no-repeat;
+      background-attachment: fixed;  
+      background-size: cover;
     }
+    
   </style>
   <meta charset="utf-8">
   <meta name="google" value="notranslate">
@@ -18,5 +22,75 @@
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
+<div class="container user-select-none mb-3">
+  <div class="row">
+    <!-- Bagian Judul -->
+    <div class="bg-white">
+      <h1 class="text-center mt-3 text-bold">Sistem Pakar</h1>
+    </div>
+    <!-- Bagian Main Tampilan -->
+    <div class="d-flex flex-column align-items-center mt-3">
+      <div class="col-sm-10 col-md-8 col-lg-6">
+        <div class="container mt-3 p-3 shadow-lg bg-white rounded">
+          <div class="mx-3 my-3">
+            <h2 >Masukkan kode kerusakan pada motor anda Untuk Mengetahui Penyebabnya</h2>
+          </div>
+          <div class="row">
+            <div class="mb-3">
+            <!-- <h3>Input 1 beserta tombol submit</h3> -->
+              <div class="mx-3">
+                <form>
+                  <div class="form-group mb-2">
+                    <label for="usr">Kode kerusakan motor</label>
+                    <input type="text" class="form-control" id="kode" placeholder="Masukan kode">
+                  </div>
+                  <div class="text-center mb-2">
+                    <button type="button" class="btn btn-secondary" onclick="pencarian_kerusakan();">Submit</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="mb-3">
+              <div class="mx-3 border p-2">
+                <div>
+                  <h6>Kode : <span id="kode_penjelasan">Nomor Kode</span></h6>
+                </div>
+                <div>
+                  <h6>Penjelasan :</h6>
+                  <h6 id="penjelasan">Isi Penjelasan (Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat)
+                  </h6>
+                </div>
+                <!-- <h4>Hasil nya beserta keterangan (Definisi Kode, Gejala, Titik kerusakan)</h4> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+function pencarian_kerusakan(){
+  var kode_kerusakan = document.getElementById("kode").value;
+  var penjelasan = "";
+  if(kode_kerusakan === "1"){
+    penjelasan = "Belum ganti oli motor 1 tahun";
+  }
+  if(kode_kerusakan === "2"){
+    penjelasan = "Gearbox rusak";
+  }
+  if(kode_kerusakan === "3"){
+    penjelasan = "Tali rem Putus";
+  }
+  if(kode_kerusakan === "4"){
+    penjelasan = "Mesin kemasukan air";
+  }
+  if(kode_kerusakan === "5"){
+    penjelasan = "Kopling Rusak";
+  }
+  document.getElementById("kode_penjelasan").innerHTML = kode_kerusakan;
+  document.getElementById("penjelasan").innerHTML = penjelasan;
+}
+</script>
 </body>
 </html>
