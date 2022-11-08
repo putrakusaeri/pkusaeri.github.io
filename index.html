@@ -45,7 +45,7 @@
                     <input type="text" class="form-control" id="kode" placeholder="Masukan kode">
                   </div>
                   <div class="text-center mb-2">
-                    <button type="button" class="btn btn-secondary" onclick="pencarian_kerusakan();">Submit</button>
+                    <button type="button" class="btn btn-secondary" id="btn-submit" onclick="pencarian_kerusakan();">Submit</button>
                   </div>
                 </form>
               </div>
@@ -70,6 +70,19 @@
   </div>
 </div>
 <script>
+var input = document.getElementById("kode");
+
+input.addEventListener("keypress", function(event) {
+  // If the user presses the "Enter" key on the keyboard
+  if (event.key === "Enter") {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    // Trigger the button element with a click
+    document.getElementById("btn-submit").click();
+  }
+});
+
+
 function pencarian_kerusakan(){
   var kode_kerusakan = document.getElementById("kode").value;
   var penjelasan = "";
