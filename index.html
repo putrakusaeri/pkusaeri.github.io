@@ -57,7 +57,8 @@
                 </div>
                 <div>
                   <h6>Penjelasan :</h6>
-                  <h6 id="penjelasan">Isi Penjelasan</h6>
+                  <h6 id="penjelasan">Isi Penjelasan (Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat)
+                  </h6>
                 </div>
                 <!-- <h4>Hasil nya beserta keterangan (Definisi Kode, Gejala, Titik kerusakan)</h4> -->
               </div>
@@ -72,20 +73,68 @@
 function pencarian_kerusakan(){
   var kode_kerusakan = document.getElementById("kode").value;
   var penjelasan = "";
-  if(kode_kerusakan === "1"){
-    penjelasan = "Belum ganti oli motor 1 tahun";
+  if(kode_kerusakan === "12"){
+    penjelasan = "Cranksaft Position Sensor/pulser. Signal yang diterima oleh CPS tidak normal";
   }
-  if(kode_kerusakan === "2"){
-    penjelasan = "Gearbox rusak";
+  if(kode_kerusakan === "13"){
+    penjelasan = "Intake Pressure Sensor terlepas atau terjadi hubungan arus pendek";
   }
-  if(kode_kerusakan === "3"){
-    penjelasan = "Tali rem Putus";
+  if(kode_kerusakan === "14"){
+    penjelasan = "Intake Pressure Sensor mengalami malfungsi (terlepas atau tersumbat)";
   }
-  if(kode_kerusakan === "4"){
-    penjelasan = "Mesin kemasukan air";
+  if(kode_kerusakan === "15"){
+    penjelasan = "Throttle Position Sensor(TPS), terlepas atau terjadi hubungan arus pendek.";
   }
-  if(kode_kerusakan === "5"){
-    penjelasan = "Kopling Rusak";
+  if(kode_kerusakan === "16"){
+    penjelasan = "Throttle Position Sensor (TPS) macet.";
+  }
+  if(kode_kerusakan === "19"){
+    penjelasan = "Side Stand Switch, saklar standar samping terlepas atau putus";
+  }
+  if(kode_kerusakan === "21"){
+    penjelasan = "Coolant temperature sensor terlepas atau korslet";
+  }
+  if(kode_kerusakan === "22"){
+    penjelasan = "Intake Temperature Sensor lepas atau terjadi hubungan arus pendek";
+  }
+  if(kode_kerusakan === "24"){
+    penjelasan = "O2 Sensor bermasalah";
+  }
+  if(kode_kerusakan === "28"){
+    penjelasan = "Engine Temperature Sensor error";
+  }
+  if(kode_kerusakan === "30"){
+    penjelasan = "Sepeda motor terjatuh";
+  }
+  if(kode_kerusakan === "37"){
+    penjelasan = "Idle Speed Control (ISC Valve) terjadi kerusakan";
+  }
+  if(kode_kerusakan === "39"){
+    penjelasan = "Fuel Injector bermasalah atau rusak";
+  }
+  if(kode_kerusakan === "41"){
+    penjelasan = "Lean angle sensor";
+  }
+  if(kode_kerusakan === "42"){
+    penjelasan = "Speed Sensor roda depan bermasalah, sinyal yang diterima tidak normal";
+  }
+  if(kode_kerusakan === "44"){
+    penjelasan = "chip EEPROM Error";
+  }
+  if(kode_kerusakan === "46"){
+    penjelasan = "Aliran listrik ke sistem FI tidak normal";
+  }
+  if(kode_kerusakan === "50"){
+    penjelasan = "Rusaknya Memori ECU";
+  }
+  if(kode_kerusakan === "61"){
+    penjelasan = "ISC tidak bekerja";
+  }
+  if(kode_kerusakan === "79"){
+    penjelasan = "Terlalu banyak udara masuk pada ruang bakar";
+  }
+  if(kode_kerusakan === "8"){
+    penjelasan = "Selenoid VVA terlepas atau terjadi korsleting";
   }
   document.getElementById("kode_penjelasan").innerHTML = kode_kerusakan;
   document.getElementById("penjelasan").innerHTML = penjelasan;
